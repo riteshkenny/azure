@@ -21,10 +21,10 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-  inputs:
-    containerRegistry: 'Ritesh Docker hub'
-    repository: 'theritesh/weatherapi'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+      inputs:
+        containerRegistry: 'Ritesh Docker hub'
+        repository: 'theritesh/weatherapi'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
